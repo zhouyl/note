@@ -4,13 +4,13 @@
 
 ```bash
 # 安装 consul
-mkdir -p /data/{src,consul}
-mkdir -p /data/consul/{data,conf,logs}
+sudo mkdir -p /data/{src,consul}
+sudo mkdir -p /data/consul/{data,conf,logs}
 cd /data/src
-wget https://releases.hashicorp.com/consul/1.3.0/consul_1.3.0_linux_amd64.zip
-unzip consul_1.3.0_linux_amd64.zip
-mv ./consul /usr/local/bin/consul
-chmod +x /usr/local/bin/consul
+sudo wget https://releases.hashicorp.com/consul/1.3.0/consul_1.3.0_linux_amd64.zip
+sudo unzip consul_1.3.0_linux_amd64.zip
+sudo mv ./consul /usr/local/bin/consul
+sudo chmod +x /usr/local/bin/consul
 ```
 
 **配置文件 `/data/consul/conf/consul.conf`**
@@ -67,6 +67,6 @@ Alias=consul.service
 **自启动服务**
 
 ```bash
-systemctl enable consul
-systemctl start consul
+sudo systemctl enable consul
+sudo systemctl start consul
 ```
